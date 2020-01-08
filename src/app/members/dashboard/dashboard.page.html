@@ -1,0 +1,36 @@
+<ion-header>
+  <img src="/assets/img/logo.png" alt="logo">
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Bienvenido</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-icon name="archive"></ion-icon>
+      <ion-card-title>Carga de Archivos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button (click)="download()" color="primary" shape="round">Download</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <div  class="d-flex justify-content-center" >
+    <div id="spnr" style="display: none" class="spinner-border text-tertiary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <ion-card>
+    <ion-card-header>
+      <ion-icon name="stats"></ion-icon>
+      <ion-card-title>Informe de productividad</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button routerLink="inform" routerDirection="forward" shape="round">Ir</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
